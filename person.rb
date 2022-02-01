@@ -1,4 +1,3 @@
-# rubocop: disable Style/OptionalBooleanParameter
 
 class Person
   attr_accessor :name, :age
@@ -21,5 +20,3 @@ class Person
 
   private :of_age?
 end
-
-# rubocop: enable Style/OptionalBooleanParameter
