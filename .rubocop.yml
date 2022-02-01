@@ -6,7 +6,8 @@ AllCops:
     - "node_modules/**/*"
 
   DisplayCopNames: true
-
+Style/EndOfLine:
+  EnforcedStyle: lf
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
