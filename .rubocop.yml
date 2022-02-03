@@ -18,8 +18,11 @@ Metrics/ClassLength:
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
-
-
+  
+Layout/EndOfLine:
+   Enabled: False
+Style/EndOfLine:
+  EnforcedStyle: lf
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
