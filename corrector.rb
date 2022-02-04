@@ -1,6 +1,9 @@
 class Corrector
   def correct_name(name)
-    name = name.capitalize
-    name[0, 10] if name.length > 10
+    name
+      .split
+      .map(&:capitalize)
+      .join(' ')
+      .slice(0, 11)
   end
 end
