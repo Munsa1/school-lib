@@ -145,3 +145,33 @@ def create_a_rental
   @people.each_with_index do |person, index|
     puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
   end
+
+  person_id = gets.chomp.to_i
+
+  print 'Date: '
+  date = gets.chomp.to_s
+
+  rental = Rental.new(date, @people[person_id], @books[book_id])
+  @rentals << rental
+
+  puts 'Rental created successfully'
+  sleep 0.75
+  menu
+end
+
+def list_rentals_by_person_id
+  print 'ID of person: '
+  id = gets.chomp.to_i
+
+  puts 'Rentals:'
+  @rentals.each do |rental|
+    puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
+  end
+  sleep 0.75
+  menu
+end
+
+def main
+  app = App.new
+  app.run
+end
