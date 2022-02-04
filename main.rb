@@ -5,6 +5,7 @@ require_relative 'rental'
 require_relative 'book'
 require_relative 'classroom'
 
+# rubocop:disable Metrics
 class App
   def initialize
     @people = []
@@ -175,3 +176,5 @@ def main
   app = App.new
   app.run
 end
+# rubocop:enable Metrics
+main
