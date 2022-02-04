@@ -12,3 +12,9 @@ class App
     @rentals = []
     @class = Classroom.new('Grade 5')
   end
+
+  def run
+    print 'Welcome To School Library App'
+    sleep 0.75
+    menu
+  end
