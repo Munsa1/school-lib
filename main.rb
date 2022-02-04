@@ -134,3 +134,14 @@ class App
     menu
   end
 end
+
+def create_a_rental
+  puts 'Select a book from the following list by number'
+  @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
+
+  book_id = gets.chomp.to_i
+
+  puts 'Select a person from the following list by number (not id)'
+  @people.each_with_index do |person, index|
+    puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+  end
