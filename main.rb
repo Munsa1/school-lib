@@ -61,3 +61,24 @@ class App
     sleep 0.75
     menu
   end
+
+  def list_all_people
+    puts 'There are no people yet! Kindly add a student or teacher.' if @people.empty?
+    @people.map { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+    sleep 0.75
+    menu
+  end
+
+  def create_a_person
+    print 'Do you want to create a student (1) or teacher (2) [Input a number]: '
+    option = gets.chomp
+
+    case option
+    when '1'
+      create_a_student
+    when '2'
+      create_a_teacher
+    else
+      puts 'Invalid input. Kindly type 1 or 2'
+    end
+  end
